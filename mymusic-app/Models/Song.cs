@@ -10,9 +10,13 @@ namespace mymusic_app.Models
         public TimeSpan Duration { get; set; }
 
         public Guid ArtistId { get; set; }
+        [JsonIgnore]
+
         public Artist Artist { get; set; }
 
         public Guid AlbumId { get; set; }
+        [JsonIgnore]
+
         public Album Album { get; set; }
         [JsonIgnore]
         public ICollection<SongGenre> Genres { get; set; }
