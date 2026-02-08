@@ -14,9 +14,11 @@ namespace mymusic_app.Models
 
         public Guid AlbumId { get; set; }
         public Album Album { get; set; }
-
+        [JsonIgnore]
         public ICollection<SongGenre> Genres { get; set; }
+        [JsonIgnore]
         public ICollection<UserSongLike> Likes { get; set; }
+        [JsonIgnore]
         public ICollection<UserSongPlay> Plays { get; set; }
 
         [JsonIgnore]
